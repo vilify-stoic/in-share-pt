@@ -4,9 +4,9 @@ const path = require('path');
 const bodyparser = require('body-parser');
 const cors = require('cors');
 
-const corsOptions = 
-     'http://localhost:3000';
-
+const corsOptions {
+     origin=process.env.ALLOWED_CLIENTS.split(',')
+}
 
 const PORT = process.env.PORT || 3000;
 app.use(cors(corsOptions))
