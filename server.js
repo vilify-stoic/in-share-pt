@@ -6,8 +6,8 @@ const cors = require('cors');
 
 
 const corsOptions = {
-    origin: process.env.ALLOWED_CLIENTS.split(',')
-    // ['http://localhost:3000', 'http://localhost:5000', 'http://localhost:3300']
+    origin: ['http://localhost:3000', 'http://localhost:5000', 'http://localhost:3300']
+    // process.env.ALLOWED_CLIENTS.split(',')
   }
 
 const PORT = process.env.PORT || 3000;
