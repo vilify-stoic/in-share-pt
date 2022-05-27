@@ -23,8 +23,9 @@ let upload = multer({
 router.post('/', async(req,res)=>{
 
     upload(req,res,async (err)=>{
-       
+        console.log("inside upload -------");
         if(!req.file){
+            
             console.log(req.file);
             return res.json({error:'All fields are required !!!!!!'});
         }
@@ -77,7 +78,7 @@ router.post('/send',async (req,res)=>{
         text:`${emailFrom} shared a file with you.`,
         html: require('../services/emailTemplate')({
             emailFrom:emailFrom,
-            downloadLink:`${process.env.APP_BASE_URL}/files/${file.uuid}`,
+            downloadLink:`${process.env.APP_BASE_URL}/file/${file.uuid}`,
             size:parseInt(file.size/1000) + 'KB',
             expires:'24 hours'
         })
