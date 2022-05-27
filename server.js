@@ -6,7 +6,7 @@ const cors = require('cors');
 
 
 const corsOptions = {
-    origin: ['http://localhost:3000', 'http://localhost:5000', 'https://in-share-ft.herokuapp.com']
+    origin: ['http://localhost:3000', 'http://localhost:5000', 'https://in-share-ft.herokuapp.com',"http://127.0.0.1:3001"]
     // process.env.ALLOWED_CLIENTS.split(',')
   }
 
